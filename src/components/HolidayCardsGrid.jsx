@@ -1,4 +1,5 @@
 import { useHolidayStore } from "../Store/holidayStore";
+import './HolidayCardsGrid.css'
 
 const formatDate = (crrDate) => {
   const [year, month, date] = crrDate.split("-");

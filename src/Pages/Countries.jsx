@@ -1,5 +1,5 @@
 import { useHolidayStore } from "../Store/holidayStore";
-import './countries.css'
+import './Countries.css'
 
 export default function Countries() {
   const countries = useHolidayStore((state) => state.countries);

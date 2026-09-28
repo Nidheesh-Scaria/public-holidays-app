@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 
+import './Header.css'
+
 function Header() {
+  
   return (
     <header className="navbar">
       <div className="nav-container">
@@ -25,19 +28,10 @@ function Header() {
             Countries
           </NavLink>
 
-          <NavLink to="/about" className="nav-link">
-            About
-          </NavLink>
+          
         </nav>
 
-        <div className="nav-actions">
-          <button className="icon-button" aria-label="Toggle theme">
-            <span className="material-symbols-outlined">dark_mode</span>
-          </button>
-          <button className="icon-button" aria-label="Settings">
-            <span className="material-symbols-outlined">settings</span>
-          </button>
-        </div>
+        
       </div>
     </header>
   );

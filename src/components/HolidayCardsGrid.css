@@ -1,0 +1,138 @@
+
+/* --------------------------------------------------------------------------
+   Holiday Cards Grid
+   -------------------------------------------------------------------------- */
+.holidays-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.holiday-card {
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  min-height: 190px;
+}
+
+.holiday-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--outline);
+}
+
+.card-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.date-block {
+  width: 52px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.date-block.date-success {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.date-month {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.date-day {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-day-meta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.weekend-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.holiday-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.holiday-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--surface-container-low);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.tag-pill {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.tag-primary {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.tag-info {
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+.tag-secondary {
+  background-color: #f5f3ff;
+  color: #7c3aed;
+}
+
+.office-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
