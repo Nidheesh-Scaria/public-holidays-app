@@ -2,10 +2,12 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import useFetchHoliday from "../Hooks/useFetchHoliday";
 import { useHolidayStore } from "../Store/holidayStore";
-import './SearchSection.css'
+import "./SearchSection.css";
 
 //getting country details
-const countryApiUrl = import.meta.env.VITE_COUNTRY_API_URL;
+const countryApiUrl =
+  import.meta.env.VITE_COUNTRY_API_URL ||
+  "https://date.nager.at/api/v3/AvailableCountries";
 
 const fetchCountries = async () => {
   const res = await fetch(countryApiUrl);

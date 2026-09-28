@@ -1,17 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
-import './Header.css'
+import "./Header.css";
 
 function Header() {
-  
   return (
     <header className="navbar">
       <div className="nav-container">
         <div className="nav-left">
-          <a href="#" className="brand-logo">
+          <Link to="/" className="brand-logo">
             <span className="material-symbols-outlined logo-icon">public</span>
             <span>Holiday Finder</span>
-          </a>
+          </Link>
         </div>
 
         <nav className="nav-menu">
@@ -27,11 +26,7 @@ function Header() {
           <NavLink to="/countries" className="nav-link">
             Countries
           </NavLink>
-
-          
         </nav>
-
-        
       </div>
     </header>
   );
