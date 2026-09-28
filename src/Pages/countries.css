@@ -1,0 +1,109 @@
+:root {
+  --bg-main: #f8fafc;
+  --surface-white: #ffffff;
+  --surface-border: #e2e8f0;
+  --primary-blue: #1d4ed8;
+  --primary-blue-hover: #2563eb;
+  --primary-blue-soft: #eff6ff;
+  --blue-badge-border: #bfdbfe;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 10px 15px -3px rgba(29, 78, 216, 0.08), 0 4px 6px -4px rgba(29, 78, 216, 0.04);
+}
+
+.countries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.countries-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--surface-border);
+  padding-bottom: 1rem;
+}
+
+.countries-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.countries-badge {
+  background: var(--primary-blue-soft);
+  color: var(--primary-blue);
+  border: 1px solid var(--blue-badge-border);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.country-card {
+  background-color: var(--surface-white);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--card-shadow);
+  cursor: default;
+}
+
+.country-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-blue-hover);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.country-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.country-code-pill {
+  background-color: var(--primary-blue-soft);
+  color: var(--primary-blue);
+  border: 1px solid var(--blue-badge-border);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  background: var(--surface-white);
+  border-radius: 12px;
+  border: 1px dashed var(--surface-border);
+}
